@@ -1,3 +1,3 @@
 <?php
-  echo 'Hello, world! deployed from github 1';
+  echo 'Hello, world! deployed from github 2';
 ?>
