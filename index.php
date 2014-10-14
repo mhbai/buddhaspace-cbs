@@ -14,11 +14,26 @@
 
 	// ADD ADDITIONAL FACEBOOK CODE HERE
 	// Place following code after FB.init call.
+	function onLogin(response) {
+	    if (response.status == 'connected') {
+		FB.api('/me?fields=first_name', function(data) {
+		    var welcomeBlock = document.getElementById('fb-welcome');
+		    welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+		});
+	    }
+	}
+
 	FB.getLoginStatus(function(response) {
 	    if (response.status === 'connected') {
-		console.log('Logged in.');
+		onLogin(response);
 	    }else{
-		FB.login();
+		FB.login(
+		/* login 後，要執行的 function */
+		function(response){
+		    onLogin(response);
+		}, 
+		/* login 後，要取得的權限*/
+		{scope: 'publish_actions'});
 	    }
 	});
 
@@ -43,7 +58,8 @@
 	// Otherwise, show Login dialog first.
 	FB.login(function(response) {
 	  onLogin(response);
-	}, {scope: 'user_friends, email'});
+	}, 
+);
       }
       });
 
@@ -61,12 +77,13 @@
 <?php
   echo 'Hello, world! deployed from github 6';
 ?>
-<div
+
+<!--div
   class="fb-like"
   data-send="true"
   data-width="450"
   data-show-faces="true">
-</div>
+</div-->
 
 </body>
 </html>
