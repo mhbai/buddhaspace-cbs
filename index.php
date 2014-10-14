@@ -11,17 +11,18 @@
 	    xfbml      : true,
 	    version    : 'v2.1'
 	});
-    };
 
-    // ADD ADDITIONAL FACEBOOK CODE HERE
-    // Place following code after FB.init call.
-    FB.getLoginStatus(function(response) {
-	if (response.status === 'connected') {
-	    console.log('Logged in.');
-	}else{
-	    FB.login();
-	}
-    });
+	// ADD ADDITIONAL FACEBOOK CODE HERE
+	// Place following code after FB.init call.
+	FB.getLoginStatus(function(response) {
+	    if (response.status === 'connected') {
+		console.log('Logged in.');
+	    }else{
+		FB.login();
+	    }
+	});
+
+    };
 
     /*
     function onLogin(response) {
