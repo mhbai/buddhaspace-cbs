@@ -94,7 +94,6 @@
 */
 </script>
 
-add jQuery to app;
 <!--div
   class="fb-like"
   data-send="true"
