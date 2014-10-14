@@ -44,7 +44,8 @@ window.fbAsyncInit = function() {
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
+     //js.src = "//connect.facebook.net/zh_TW/sdk.js";
+     js.src = "//connect.facebook.net/zh_TW/debug.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -52,5 +53,12 @@ window.fbAsyncInit = function() {
 <?php
   echo 'Hello, world! deployed from github 6';
 ?>
+<div
+  class="fb-like"
+  data-send="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 </body>
 </html>
