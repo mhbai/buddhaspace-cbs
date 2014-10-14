@@ -21,7 +21,7 @@
 			welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
 		    });
 
-		    var json = JSON.stringify(response);
+		    var json = JSON.stringify(response, null, 4);
 		    $('#info').val(json);;
 		}
 	    }
