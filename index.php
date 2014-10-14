@@ -102,7 +102,7 @@ add jQuery to app;
   data-show-faces="true">
 </div-->
 
-<textarea id='info'></textarea>
+<textarea id='info' cols='80' rows='30'></textarea>
 
 
 </body>
