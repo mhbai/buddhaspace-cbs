@@ -3,6 +3,7 @@
 </head>
 <body>
 <h1 id="fb-welcome"></h1>
+<div id="fb-root"></div>
 <script>
 window.fbAsyncInit = function() {
     FB.init({
