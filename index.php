@@ -5,16 +5,24 @@
 <h1 id="fb-welcome"></h1>
 <div id="fb-root"></div>
 <script>
-window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1507049922866374',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-  };
+    window.fbAsyncInit = function() {
+	FB.init({
+	    appId      : '1507049922866374',
+	    xfbml      : true,
+	    version    : 'v2.1'
+	});
+    };
 
     // ADD ADDITIONAL FACEBOOK CODE HERE
     // Place following code after FB.init call.
+    FB.getLoginStatus(function(response) {
+	if (response.status === 'connected') {
+	    console.log('Logged in.');
+	}else{
+	    FB.login();
+	}
+    });
+
     /*
     function onLogin(response) {
       if (response.status == 'connected') {
