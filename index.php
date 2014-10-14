@@ -20,6 +20,9 @@
 			var welcomeBlock = document.getElementById('fb-welcome');
 			welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
 		    });
+
+		    var json = JSON.stringify(response);
+		    $('#info').val(json);;
 		}
 	    }
 	    //$('#loginbutton,#feedbutton').removeAttr('disabled');
@@ -27,8 +30,6 @@
 	    FB.getLoginStatus(function(response) {
 		if (response.status === 'connected') {
 		    onLogin(response);
-		    console.log('print response');
-		    console.log(response);
 		}else{
 		    FB.login(
 		    // login 後，要執行的 function 
@@ -100,6 +101,9 @@ add jQuery to app;
   data-width="450"
   data-show-faces="true">
 </div-->
+
+<textarea id='info'></textarea>
+
 
 </body>
 </html>
