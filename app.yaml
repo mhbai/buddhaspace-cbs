@@ -8,8 +8,8 @@ handlers:
 - url: /
   script: index.php
 
-- url: /write\.php
-  script: write.php
-
-- url: /read\.php
-  script: read.php
+#- url: /write\.php
+#  script: write.php
+#
+#- url: /read\.php
+#  script: read.php
