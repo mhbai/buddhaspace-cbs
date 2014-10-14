@@ -27,6 +27,8 @@
 	    FB.getLoginStatus(function(response) {
 		if (response.status === 'connected') {
 		    onLogin(response);
+		    console.log('print response');
+		    console.log(response);
 		}else{
 		    FB.login(
 		    // login 後，要執行的 function 
