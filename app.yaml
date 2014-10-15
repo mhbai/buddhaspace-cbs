@@ -11,5 +11,5 @@ handlers:
 - url: /write\.php
   script: write.php
 
-#- url: /read\.php
-#  script: read.php
+- url: /read\.php
+  script: read.php
